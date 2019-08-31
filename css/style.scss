@@ -1,10 +1,10 @@
 $orange: #fc5b4d;
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -71,6 +71,7 @@ body {
         }
     }
 }
+
 #slider_container {
     .slider_content {
         background: #b3d7ff;
@@ -78,19 +79,19 @@ body {
             font-size: 28px;
             color: #ffffff;
             background: #000;
-            width: 400px;
+            width: 350px;
             margin-bottom: 18px;
         }
         p {
             color: #000000;
             background: #ffffff;
             font-size: 20px;
-            width: 500px;
+            width: 450px;
             margin-bottom: 3px;
         }
         h3,
         p {
-            padding: 10px 50px 10px 10px;
+            padding-left: 10px;
         }
         .btn {
             margin-top: 25px;

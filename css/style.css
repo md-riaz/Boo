@@ -8,6 +8,11 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Arvo", serif;
 }
 
 #main-header .logo-container {
@@ -90,7 +95,7 @@ body {
   font-size: 28px;
   color: #ffffff;
   background: #000;
-  width: 400px;
+  width: 350px;
   margin-bottom: 18px;
 }
 
@@ -98,12 +103,13 @@ body {
   color: #000000;
   background: #ffffff;
   font-size: 20px;
-  width: 500px;
+  width: 450px;
   margin-bottom: 3px;
 }
 
-#slider_container .slider_content h3, #slider_container .slider_content p {
-  padding: 10px 50px 10px 10px;
+#slider_container .slider_content h3,
+#slider_container .slider_content p {
+  padding-left: 10px;
 }
 
 #slider_container .slider_content .btn {
