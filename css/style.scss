@@ -1,0 +1,108 @@
+$orange: #fc5b4d;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Arvo", serif;
+}
+
+#main-header {
+    .logo-container {
+        text-transform: uppercase;
+        a {
+            font-size: 25px;
+            font-weight: bold;
+            color: $orange;
+            line-height: 1;
+            display: inline-block;
+            text-decoration: none;
+            padding: 20px 35px;
+            span {
+                font-size: 15px;
+                color: #ffffff;
+                background-color: $orange;
+                vertical-align: middle;
+            }
+        }
+    }
+    .navigation-container {
+        display: flex;
+        justify-content: flex-end;
+        .main-nav {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-end;
+                li {
+                    a {
+                        display: block;
+                        padding: 20px;
+                        font-size: 13px;
+                        font-weight: bold;
+                        color: #000000;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        &:hover {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $orange;
+            width: 75px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+    }
+}
+#slider_container {
+    .slider_content {
+        background: #b3d7ff;
+        h3 {
+            font-size: 28px;
+            color: #ffffff;
+            background: #000;
+            width: 400px;
+            margin-bottom: 18px;
+        }
+        p {
+            color: #000000;
+            background: #ffffff;
+            font-size: 20px;
+            width: 500px;
+            margin-bottom: 3px;
+        }
+        h3,
+        p {
+            padding: 10px 50px 10px 10px;
+        }
+        .btn {
+            margin-top: 25px;
+            padding-left: 0;
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                padding: 15px 30px;
+                background: $orange;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
