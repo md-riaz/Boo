@@ -34,6 +34,9 @@
     
     a {
         text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
     }
     
     body {
@@ -392,6 +395,10 @@
                     background: $slatblue;
                     color: #ffffff;
                 }
+            }
+            .active.btn__tab {
+                background: $slatblue;
+                color: #ffffff;
             }
         }
     }
