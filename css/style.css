@@ -305,13 +305,12 @@ body {
   color: #999999;
 }
 
-#about .about_info .more_btn {
+#about .about_info .btn {
   margin-top: 40px;
 }
 
-#about .about_info .more_btn a {
+#about .about_info .btn a {
   padding: 10px;
-  background: #fff;
   border-radius: 4px;
   border: 1px solid #fc5b4d;
   color: #fc5b4d;
@@ -321,7 +320,7 @@ body {
   transition: 0.5s;
 }
 
-#about .about_info .more_btn a:hover {
+#about .about_info .btn a:hover {
   text-decoration: none;
   background: #fc5b4d;
   color: #ffffff;
@@ -410,5 +409,59 @@ body {
 #portfolio .filter_grp .active.btn__tab {
   background: #8475ce;
   color: #ffffff;
+}
+
+#portfolio .portfolio_images {
+  margin: 50px 0;
+}
+
+#portfolio .portfolio_image {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#portfolio .portfolio_image:last-child {
+  margin-bottom: 0;
+}
+
+#portfolio .portfolio_image:hover .details {
+  display: block;
+}
+
+#portfolio .portfolio_image .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fc5b4d;
+  padding: 40px 30px;
+  height: 100%;
+  display: none;
+}
+
+#portfolio .portfolio_image .details h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#portfolio .portfolio_image .details p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
+
+#portfolio .portfolio_image .details a {
+  text-transform: capitalize;
+  color: #ffffff;
+  border: 1px solid #fff;
+  margin-top: 20px;
+}
+
+#testimonials {
+  margin: 100px 0;
+}
+
+#testimonials .clients_brands {
+  margin-top: 90px;
 }
 /*# sourceMappingURL=style.css.map */

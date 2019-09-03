@@ -303,11 +303,10 @@
                 font-size: 13px;
                 color: $w_gray;
             }
-            .more_btn {
+            .btn {
                 margin-top: 40px;
                 a {
                     padding: 10px;
-                    background: #fff;
                     border-radius: 4px;
                     border: 1px solid $orange;
                     color: $orange;
@@ -400,5 +399,56 @@
                 background: $slatblue;
                 color: #ffffff;
             }
+        }
+        .portfolio_images {
+            margin: 50px 0;
+        }
+        .portfolio_image {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                .details {
+                    display: block;
+                }
+            }
+            .details {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $orange;
+                padding: 40px 30px;
+                height: 100%;
+                display: none;
+                h6 {
+                    font: {
+                        family: $Montserrat;
+                        size: 15px;
+                    }
+                    text-transform: uppercase;
+                }
+                p {
+                    font: {
+                        family: $Open_Sans;
+                        size: 13px;
+                    }
+                }
+                a {
+                    text-transform: capitalize;
+                    color: #ffffff;
+                    border: 1px solid #fff;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+    #testimonials {
+        margin: 100px 0;
+        .clients_brands {
+            margin-top: 90px;
         }
     }
