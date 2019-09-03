@@ -45,6 +45,11 @@ body {
   color: #ffffff;
   background-color: #fc5b4d;
   vertical-align: middle;
+  padding: 1px 5px;
+  position: relative;
+  top: -2px;
+  left: -3px;
+  border-radius: 3px;
 }
 
 #main-header .navigation-container {
