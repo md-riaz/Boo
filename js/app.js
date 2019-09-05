@@ -14,3 +14,27 @@ btn_tabs.forEach(el => {
         el.classList.add("active");
     });
 });
+
+/* 
+ * Owl Carosel
+ */
+$(document).ready(function(){
+
+    $(".slide").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true
+    });
+
+    $(".testi_slider").owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true
+    });
+
+    // $(".team_slider").owlCarousel({
+    //     items: 3,
+    //     loop: true,
+    //     autoplay: true
+    // });
+  });
