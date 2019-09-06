@@ -14,8 +14,7 @@ a {
 
 body {
   margin: 0;
-  padding: 0;
-  overflow-x: hidden; }
+  padding: 0; }
 
 #main-header .logo-container {
   text-transform: uppercase; }
@@ -138,6 +137,17 @@ body {
     font-size: 13px;
     font-weight: 700; }
 
+.slider_bg {
+  background-image: url(../img/BG-WHITE.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 900px;
+  z-index: 1;
+  position: absolute;
+  top: 350px; }
+
 .title {
   color: #555555;
   font-family: "Montserrat", sans-serif;
@@ -182,7 +192,9 @@ body {
 
 #about {
   margin-top: 200px;
-  color: #777777; }
+  color: #777777;
+  position: relative;
+  z-index: 1; }
   #about .about_photos {
     height: 400px;
     position: relative;
@@ -446,14 +458,24 @@ body {
   font-size: 16px;
   font-weight: 700; }
 
+#team .team_slider .team_member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 #team .team_slider .team_contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 100px 0; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 100px 0;
+  padding: 50px 0;
+  width: 100%; }
   #team .team_slider .team_contents .team_img {
     width: 240px;
     height: 290px;
@@ -470,31 +492,42 @@ body {
             align-items: center; }
     #team .team_slider .team_contents .team_img img {
       max-width: 100%; }
-  #team .team_slider .team_contents .team_details h6 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    color: #fff; }
-  #team .team_slider .team_contents .team_details p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px; }
-  #team .team_slider .team_contents .team_details .skills p {
-    font-size: 13px;
-    margin: 15px;
-    color: #fff; }
-  #team .team_slider .team_contents .team_details .skill {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    #team .team_slider .team_contents .team_details .skill .progress {
-      width: 200px;
-      height: 10px;
-      background-color: #52ba92;
-      border-radius: 10px; }
-      #team .team_slider .team_contents .team_details .skill .progress .progress-bar {
-        background-color: #fff; }
+  #team .team_slider .team_contents .team_details {
+    margin-right: 30px; }
+    #team .team_slider .team_contents .team_details .name {
+      margin: 15px; }
+    #team .team_slider .team_contents .team_details h6 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: #fff; }
+    #team .team_slider .team_contents .team_details p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px; }
+    #team .team_slider .team_contents .team_details .skills p {
+      font-size: 13px;
+      margin: 5px 15px;
+      color: #fff; }
+    #team .team_slider .team_contents .team_details .skill {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #team .team_slider .team_contents .team_details .skill .label {
+        width: 100px; }
+      #team .team_slider .team_contents .team_details .skill .progress {
+        width: 200px;
+        height: 10px;
+        background-color: #00000026;
+        border-radius: 10px; }
+        #team .team_slider .team_contents .team_details .skill .progress .progress-bar {
+          background-color: #fff; }
+    #team .team_slider .team_contents .team_details .social {
+      margin: 40px 0 0 15px; }
+      #team .team_slider .team_contents .team_details .social i {
+        margin-right: 10px;
+        color: #ffffff; }
 
 #team .team_slider .team_1 {
   background-color: #5cc99f; }
