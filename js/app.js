@@ -32,9 +32,9 @@ $(document).ready(function(){
         autoplay: true
     });
 
-    // $(".team_slider").owlCarousel({
-    //     items: 3,
-    //     loop: true,
-    //     autoplay: true
-    // });
+    $(".team_slide").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true
+    });
   });
