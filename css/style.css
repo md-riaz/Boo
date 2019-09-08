@@ -501,7 +501,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 100px 0;
-  padding: 50px 50px 50px 0;
+  padding: 50px 0;
   width: 100%; }
   #team .team_slider .team_contents .team_img {
     width: 240px;
@@ -523,7 +523,7 @@ body {
     margin-right: 30px;
     width: calc(100% - 300px); }
     #team .team_slider .team_contents .team_details .name {
-      margin: 15px; }
+      margin: 15px 5px; }
     #team .team_slider .team_contents .team_details h6 {
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
@@ -533,7 +533,8 @@ body {
       font-size: 14px; }
     #team .team_slider .team_contents .team_details .skills p {
       font-size: 13px;
-      margin: 5px 15px;
+      margin: 5px;
+      width: 15px;
       color: #fff; }
     #team .team_slider .team_contents .team_details .skill {
       display: -webkit-box;
@@ -556,6 +557,9 @@ body {
       #team .team_slider .team_contents .team_details .social a {
         margin-right: 10px;
         color: #ffffff; }
+        @media screen and (max-width: 1730px) {
+          #team .team_slider .team_contents .team_details .social a i {
+            font-size: 1.5em; } }
 
 #team .team_slider .team_1 {
   background-color: #5cc99f; }

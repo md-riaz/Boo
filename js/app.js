@@ -18,7 +18,7 @@ btn_tabs.forEach(el => {
 /* 
  * Owl Carosel
  */
-$(document).ready(function(){
+$(document).ready(function () {
 
     $(".slide").owlCarousel({
         items: 1,
@@ -33,8 +33,8 @@ $(document).ready(function(){
     });
 
     $(".team_slide").owlCarousel({
-        items: 1,
+        items: 3,
         loop: true,
-        autoplay: true
+        // autoplay: true
     });
-  });
+});
