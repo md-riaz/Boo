@@ -1171,7 +1171,10 @@ body {
         }
     }
 
-    @media screen and (max-width: 1024px) {
-        display: none;
+    img,
+    span.circle {
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
     }
 }

@@ -782,7 +782,8 @@ body {
     text-align: left; }
   #theme_feature .theme_2 .theme_items {
     margin: 50px 0 0 50px; }
-  @media screen and (max-width: 1024px) {
-    #theme_feature {
+  @media screen and (max-width: 1200px) {
+    #theme_feature img,
+    #theme_feature span.circle {
       display: none; } }
 /*# sourceMappingURL=style.css.map */
