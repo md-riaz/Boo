@@ -762,11 +762,10 @@ body {
             }
 
             .team_details {
-                margin-right: 30px;
                 width: calc(100% - 300px);
 
                 .name {
-                    margin: 15px 5px;
+                    margin: 15px 0px;
                 }
 
                 h6 {
@@ -788,7 +787,7 @@ body {
                 .skills {
                     p {
                         font-size: 13px;
-                        margin: 5px;
+                        margin: 5px 0;
                         width: 15px;
                         color: #fff;
                     }
@@ -797,6 +796,7 @@ body {
                 .skill {
                     display: flex;
                     align-items: center;
+                    flex-wrap: wrap;
 
                     .label {
                         width: 100px;
@@ -815,7 +815,7 @@ body {
                 }
 
                 .social {
-                    margin: 40px 0 0 15px;
+                    margin: 40px 0;
 
                     a {
                         margin-right: 10px;

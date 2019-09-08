@@ -520,10 +520,9 @@ body {
     #team .team_slider .team_contents .team_img img {
       max-width: 100%; }
   #team .team_slider .team_contents .team_details {
-    margin-right: 30px;
     width: calc(100% - 300px); }
     #team .team_slider .team_contents .team_details .name {
-      margin: 15px 5px; }
+      margin: 15px 0px; }
     #team .team_slider .team_contents .team_details h6 {
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
@@ -533,7 +532,7 @@ body {
       font-size: 14px; }
     #team .team_slider .team_contents .team_details .skills p {
       font-size: 13px;
-      margin: 5px;
+      margin: 5px 0;
       width: 15px;
       color: #fff; }
     #team .team_slider .team_contents .team_details .skill {
@@ -542,7 +541,9 @@ body {
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
       #team .team_slider .team_contents .team_details .skill .label {
         width: 100px; }
       #team .team_slider .team_contents .team_details .skill .progress {
@@ -553,7 +554,7 @@ body {
         #team .team_slider .team_contents .team_details .skill .progress .progress-bar {
           background-color: #fff; }
     #team .team_slider .team_contents .team_details .social {
-      margin: 40px 0 0 15px; }
+      margin: 40px 0; }
       #team .team_slider .team_contents .team_details .social a {
         margin-right: 10px;
         color: #ffffff; }
