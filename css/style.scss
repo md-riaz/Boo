@@ -35,12 +35,22 @@ sans-serif;
     box-sizing: border-box;
 }
 
-a {
+a,
+a:hover {
     text-decoration: none;
+    color: inherit;
+}
 
-    &:hover {
-        text-decoration: none;
-    }
+h6 {
+    font: 400 16px/1.9 $Montserrat;
+}
+
+p {
+    font: 400 13px/1.85 $Open_Sans
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
@@ -118,7 +128,13 @@ body {
     }
 }
 
+section {
+    padding: 50px 0;
+}
+
 #slider {
+    padding-top: 0;
+
     .slide_items {
         height: 700px;
         display: flex;
@@ -167,7 +183,6 @@ body {
             font: {
                 family: $Montserrat;
                 size: 20px;
-                weight: 400;
             }
 
             color: #000000;
@@ -207,7 +222,7 @@ body {
     background: {
         image: url(../img/BG-WHITE.png);
         size: contain;
-        position: center;
+        position: to;
         repeat: no-repeat;
     }
 
@@ -215,11 +230,12 @@ body {
     height: 900px;
     z-index: 1;
     position: absolute;
-    top: 350px;
+    top: 600px;
 }
 
 .title {
     color: $d_gray;
+    text-transform: uppercase;
 
     font: {
         family: $Montserrat;
@@ -236,7 +252,7 @@ body {
         height: 2px;
         background: $Neon_Carrot;
         left: 50%;
-        top: 45px;
+        top: 50px;
         transform: translate(-50%, -50%);
 
         &::before,
@@ -282,7 +298,7 @@ body {
 }
 
 #about {
-    margin-top: 200px;
+    padding-top: 0;
     color: $l_gray;
     position: relative;
     z-index: 1;
@@ -343,6 +359,8 @@ body {
     }
 
     & .short_desc {
+        line-height: 1.9;
+
         font: {
             family: $Montserrat;
             size: 16px;
@@ -365,7 +383,12 @@ body {
     }
 
     .about_info {
-        margin: 100px 0;
+        margin-top: 50px;
+
+        &>div {
+            padding: 0 10px;
+        }
+
 
         .content {
             font-family: $Montserrat;
@@ -384,7 +407,6 @@ body {
 
                 h6 {
                     font: {
-                        size: 16px;
                         weight: 400;
                     }
 
@@ -396,11 +418,13 @@ body {
 
         p.desc {
             font-size: 13px;
+            font-family: $Open_Sans;
             color: $w_gray;
+            line-height: 1.9;
         }
 
         .btn {
-            margin-top: 40px;
+            margin-top: 10px;
 
             a {
                 padding: 10px;
@@ -423,7 +447,6 @@ body {
 
 #facts {
     text-align: center;
-    margin: 150px 0;
 
     .title_desc {
         span:nth-child(1) {
@@ -461,32 +484,40 @@ body {
     }
 
     .txt1 {
-        background: #d54444;
+        background: #d54444 url(../img/facts/POLYGON1.jpg) no-repeat center;
+        background-size: cover;
     }
 
     .txt2 {
-        background: $orange;
+        background: $orange url(../img/facts/POLYGON2.jpg) no-repeat center;
+        background-size: cover;
     }
 
     .txt3 {
-        background: $Neon_Carrot;
+        background: $Neon_Carrot url(../img/facts/POLYGON3.jpg) no-repeat center;
+        background-size: cover;
     }
 
     .txt4 {
-        background: $yellow;
+        background: $yellow url(../img/facts/POLYGON4.jpg) no-repeat center;
+        background-size: cover;
     }
 
     .txt5 {
-        background: #51b991;
+        background: #51b991 url(../img/facts/POLYGON5.jpg) no-repeat center;
+        background-size: cover;
     }
 
     .txt6 {
-        background: #adce61;
+        background: $l_green url(../img/facts/POLYGON6.jpg) no-repeat center;
+        background-size: cover;
     }
 }
 
 #portfolio {
     .title_desc {
+        font-size: 44px;
+
         span::nth-child(1) {
             color: $bright_blue;
         }
@@ -541,7 +572,7 @@ body {
 
         &:hover {
             .details {
-                // opacity: 1;
+                opacity: 1;
                 visibility: visible;
                 transition: .5s;
             }
@@ -573,7 +604,6 @@ body {
 
             h6 {
                 font: {
-                    family: $Montserrat;
                     size: 15px;
                 }
 
@@ -581,10 +611,7 @@ body {
             }
 
             p {
-                font: {
-                    family: $Open_Sans;
-                    size: 13px;
-                }
+                line-height: 1.7;
             }
 
             a {
@@ -626,7 +653,6 @@ body {
 }
 
 #testimonials {
-    margin: 100px 0;
 
     .clients_brands {
         margin: 90px 0;
@@ -646,7 +672,7 @@ body {
             text-align: left;
 
             img {
-                width: 80px;
+                min-width: 80px;
                 height: 80px;
             }
 
@@ -682,12 +708,14 @@ body {
 
                 }
 
+
                 .content {
                     padding: 20px 30px;
                     border: 1px solid $l_green;
                     color: $w_gray;
                     margin-top: 20px;
                     position: relative;
+                    line-height: 1.7;
 
                     font: {
                         family: $Arvo;
@@ -769,10 +797,6 @@ body {
                 }
 
                 h6 {
-                    font: {
-                        family: $Montserrat;
-                        weight: 400;
-                    }
 
                     color: #fff;
                 }
@@ -786,7 +810,6 @@ body {
 
                 .skills {
                     p {
-                        font-size: 13px;
                         margin: 5px 0;
                         width: 15px;
                         color: #fff;
@@ -846,7 +869,6 @@ body {
 }
 
 #features {
-    margin: 100px 0;
 
     .title_desc {
         span:nth-child(1) {
@@ -886,17 +908,7 @@ body {
         h6 {
             margin: 35px 0 25px 0;
 
-            font: {
-                family: $Montserrat;
-                weight: 400;
-            }
-        }
 
-        p {
-            font: {
-                family: $Open_Sans;
-                size: 13px;
-            }
         }
     }
 
@@ -938,7 +950,6 @@ body {
 }
 
 #theme_feature {
-    padding: 100px 0;
     background-color: #f9f9f9;
 
     .title {
@@ -954,9 +965,9 @@ body {
         }
 
         p {
+
             font: {
                 family: $Montserrat;
-                weight: 400;
                 size: 14px
             }
         }
@@ -1124,20 +1135,9 @@ body {
         margin: 20px;
     }
 
-    h6 {
-        font: {
-            family: $Montserrat;
-            weight: 400;
-        }
-    }
+
 
     p {
-        font: {
-            family: $Open_Sans;
-            weight: 400;
-            size: 13px
-        }
-
         margin-top: 10px;
     }
 
@@ -1160,7 +1160,7 @@ body {
 
     .theme_2 {
         .icon {
-            margin-left: 0;
+            margin-left: -15px;
             margin-right: 15px;
         }
 
@@ -1182,6 +1182,324 @@ body {
     span.circle {
         @media screen and (max-width: 1200px) {
             display: none;
+        }
+    }
+}
+
+#services {
+    background: $orange url(../img/What_we_do_bg.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff;
+
+    .title,
+    .title_desc,
+    span {
+        color: #fff;
+    }
+
+    .divider {
+        background: #ffffff;
+
+        &::before,
+        &::after {
+            background: #ffffff;
+        }
+    }
+
+    ul li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 10px;
+        transition: .5s;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 10px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 30%;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            transform: rotate(45deg) scale(0);
+            transition: .5s;
+        }
+
+        &:hover,
+        &.active {
+            background: #ffffff;
+            color: $orange;
+
+            &::after {
+                transform: rotate(45deg) scale(1);
+            }
+
+            .i1,
+            .i2,
+            .i3,
+            .i4,
+            .i5,
+            .i6,
+            .i7 {
+                background-position: right;
+            }
+        }
+    }
+
+    .service {
+        &_icon {
+            height: 25px;
+            width: 30px;
+            margin-right: 20px;
+            font-size: 1.5em;
+        }
+
+        .i1,
+        .i2,
+        .i3,
+        .i4,
+        .i5,
+        .i6,
+        .i7 {
+            background: no-repeat left;
+            transition: .5s;
+        }
+
+        .i1 {
+            background-image: url(../img/icons/browser.png);
+        }
+
+        .i2 {
+            background-image: url(../img/icons/ipad.png);
+        }
+
+        .i3 {
+            background-image: url(../img/icons/file.png);
+        }
+
+        .i4 {
+            background-image: url(../img/icons/mac.png);
+        }
+
+        .i5 {
+            background-image: url(../img/icons/justice.png);
+        }
+
+        .i6 {
+            background-image: url(../img/icons/polaroid.png);
+        }
+
+        .i7 {
+            background-image: url(../img/icons/copy_paste.png);
+        }
+
+        &_details {
+            .line {
+                position: relative;
+                background-color: #524e4e;
+                width: 52px;
+                height: 2px;
+                margin: 20px 0;
+            }
+        }
+
+        &_img {
+            padding: 0 10px 0 40px;
+            position: relative;
+
+            &_inner {
+                position: absolute;
+                width: 385px;
+                height: 205px;
+                top: 75px;
+                left: 45px;
+                background: #526b71;
+            }
+        }
+
+        &_action_btn {
+            padding: 50px 0;
+
+            a {
+                padding: 10px 30px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                font: 700 13px $Montserrat;
+                transition: .5s;
+
+                &:hover {
+                    color: $orange;
+                    background: #fff;
+                }
+            }
+
+            a:last-child {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+
+}
+
+#How_we_do {
+    .title_desc {
+        span:nth-child(1) {
+            font-weight: 800;
+            color: $green;
+        }
+
+        span:nth-child(2) {
+            font-weight: 800;
+            color: $orange;
+        }
+    }
+
+    .step {
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            transform: rotate(45deg);
+
+            svg {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &_num {
+            margin: 15px;
+        }
+
+        &_1 {
+            .icon {
+                background: $orange;
+            }
+        }
+
+        &_2 {
+            .icon {
+                background: $Neon_Carrot;
+            }
+        }
+
+        &_3 {
+            .icon {
+                background: $l_green;
+            }
+        }
+
+        &_4 {
+            .icon {
+                background: $green;
+            }
+        }
+
+        &_num1,
+        &_num2,
+        &_num3,
+        &_num4,
+            {
+            font: italic 700 24px/1.5 $Montserrat;
+
+        }
+
+        &_num1 {
+            color: $orange;
+        }
+
+        &_num2 {
+            color: $Neon_Carrot;
+        }
+
+        &_num3 {
+            color: $l_green;
+        }
+
+        &_num4 {
+            color: $green;
+        }
+    }
+
+    .line_1,
+    .line_2,
+    .line_3,
+    .line_4 {
+        position: relative;
+        display: block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        left: 50%;
+
+        &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+        }
+    }
+
+    .line_1 {
+        border: 1px solid $orange;
+        transform: rotate(30deg);
+
+        &::after {
+            width: 275px;
+            background: $orange;
+            top: 47%;
+            left: 13px;
+        }
+    }
+
+    .line_2 {
+        border: 1px solid $Neon_Carrot;
+        transform: rotate(60deg);
+
+        &::after {
+            width: 155px;
+            background: $Neon_Carrot;
+            top: 47%;
+            left: 13px;
+        }
+    }
+
+    .line_3 {
+        border: 1px solid $l_green;
+        transform: rotate(120deg);
+
+        &::after {
+            width: 150px;
+            background: $l_green;
+            top: 47%;
+            left: 13px;
+        }
+    }
+
+    .line_4 {
+        border: 1px solid $green;
+        transform: rotate(145deg);
+
+        &::after {
+            width: 275px;
+            background: $green;
+            top: 47%;
+            left: 13px;
         }
     }
 }

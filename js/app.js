@@ -23,18 +23,21 @@ $(document).ready(function () {
     $(".slide").owlCarousel({
         items: 1,
         loop: true,
+        dots: false,
         autoplay: true
     });
 
     $(".testi_slider").owlCarousel({
         items: 2,
         loop: true,
+        dots: false,
         autoplay: true
     });
 
     $(".team_slide").owlCarousel({
         items: 3,
         loop: true,
-        // autoplay: true
+        dots: false,
+        autoplay: true
     });
 });
