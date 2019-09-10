@@ -866,6 +866,16 @@ section {
             background-color: $orange;
         }
     }
+
+    .owl-nav {
+        font-size: 7em;
+        position: relative;
+        top: -935px;
+        left: 36%;
+        display: flex;
+        justify-content: space-between;
+        width: 350px;
+    }
 }
 
 #features {
@@ -1434,6 +1444,44 @@ section {
         &_num4 {
             color: $green;
         }
+
+        &_img {
+            position: relative;
+        }
+
+        &_label_1,
+        &_label_2 {
+            padding: 7px 33px;
+            font: 200 16px/2.25 $Raleway;
+            color: #ffffff;
+            position: absolute;
+
+            span {
+                font-weight: 700;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                right: 0;
+                border: 10px solid;
+                border-color: #ffffff75 #efefed #f1f1ef #ffffff75;
+            }
+        }
+
+        &_label_1 {
+            background: $orange;
+            top: 38%;
+            left: 50%;
+        }
+
+        &_label_2 {
+            background: $green;
+            top: 48%;
+            left: 55%;
+
+        }
     }
 
     .line_1,
@@ -1446,6 +1494,7 @@ section {
         width: 15px;
         border-radius: 50%;
         left: 50%;
+        z-index: 1;
 
         &::after {
             position: absolute;

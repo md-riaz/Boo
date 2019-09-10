@@ -584,6 +584,19 @@ section {
 #team .team_slider .team_3 {
   background-color: #fc5b4d; }
 
+#team .owl-nav {
+  font-size: 7em;
+  position: relative;
+  top: -935px;
+  left: 36%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 350px; }
+
 #features .title_desc span:nth-child(1) {
   color: #74b8ce; }
 
@@ -984,6 +997,34 @@ section {
 #How_we_do .step_num4 {
   color: #5cc99f; }
 
+#How_we_do .step_img {
+  position: relative; }
+
+#How_we_do .step_label_1, #How_we_do .step_label_2 {
+  padding: 7px 33px;
+  font: 200 16px/2.25 "Raleway", sans-serif;
+  color: #ffffff;
+  position: absolute; }
+  #How_we_do .step_label_1 span, #How_we_do .step_label_2 span {
+    font-weight: 700; }
+  #How_we_do .step_label_1:before, #How_we_do .step_label_2:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    border: 10px solid;
+    border-color: #ffffff75 #efefed #f1f1ef #ffffff75; }
+
+#How_we_do .step_label_1 {
+  background: #fc5b4d;
+  top: 38%;
+  left: 50%; }
+
+#How_we_do .step_label_2 {
+  background: #5cc99f;
+  top: 48%;
+  left: 55%; }
+
 #How_we_do .line_1,
 #How_we_do .line_2,
 #How_we_do .line_3,
@@ -993,7 +1034,8 @@ section {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  left: 50%; }
+  left: 50%;
+  z-index: 1; }
   #How_we_do .line_1::after,
   #How_we_do .line_2::after,
   #How_we_do .line_3::after,
