@@ -46,7 +46,9 @@ h6 {
 }
 
 p {
-    font: 400 13px/1.85 $Open_Sans
+    font: 400 13px/1.85 $Open_Sans;
+    text-transform: capitalize;
+    color: $w_gray;
 }
 
 img {
@@ -222,7 +224,7 @@ section {
     background: {
         image: url(../img/BG-WHITE.png);
         size: contain;
-        position: to;
+        position: top;
         repeat: no-repeat;
     }
 
@@ -461,6 +463,10 @@ section {
     .texts {
         text-transform: uppercase;
         padding: 30px 0;
+
+        p {
+            color: #fff;
+        }
 
         p:nth-child(1) {
             font: {
@@ -802,6 +808,8 @@ section {
                 }
 
                 p {
+                    color: #fff;
+
                     font: {
                         family: $Montserrat;
                         size: 14px;
@@ -1323,6 +1331,10 @@ section {
                 height: 2px;
                 margin: 20px 0;
             }
+
+            p {
+                color: #fff;
+            }
         }
 
         &_img {
@@ -1343,6 +1355,7 @@ section {
             padding: 50px 0;
 
             a {
+                display: inline-block;
                 padding: 10px 30px;
                 border: 1px solid #fff;
                 border-radius: 5px;
@@ -1455,6 +1468,7 @@ section {
             font: 200 16px/2.25 $Raleway;
             color: #ffffff;
             position: absolute;
+            box-shadow: 2px 5px 8px 5px #0000003b;
 
             span {
                 font-weight: 700;
@@ -1466,7 +1480,7 @@ section {
                 bottom: 0;
                 right: 0;
                 border: 10px solid;
-                border-color: #ffffff75 #efefed #f1f1ef #ffffff75;
+                border-color: #ffffff75 #b4b5b1 #b1b1ad #ffffff75;
             }
         }
 
@@ -1548,6 +1562,168 @@ section {
             background: $green;
             top: 47%;
             left: 13px;
+        }
+    }
+}
+
+#pricing {
+    padding: 100px 0;
+    background: #f9f9f9;
+
+    .title_desc {
+        span:nth-child(1) {
+            font-weight: 800;
+            color: $green;
+        }
+
+        span:nth-child(2) {
+            font-weight: 800;
+            color: $orange;
+        }
+    }
+
+    .price {
+        &_items {
+            border: 1px solid #ececec;
+            transition: .5s;
+            height: 635px;
+
+            a {
+                color: currentColor;
+                transition: inherit;
+                padding: 10px 15px;
+                position: absolute;
+                left: 50%;
+                transform: translatex(-50%);
+                bottom: 25px;
+            }
+        }
+    }
+
+    h6 {
+        font-size: 18px;
+        padding: 15px;
+        margin: 0;
+    }
+
+    p {
+        line-height: 2.7;
+        padding: 0 50px;
+    }
+
+    .price_wrapper {
+        padding: 20px;
+        height: 165px;
+        margin-bottom: 20px;
+        background: #f9f9f9;
+        clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+        transition: .5s;
+
+        p {
+            font-size: 14px;
+            transition: .5s;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+        }
+
+        span {
+            font: 700 62px/.8 $Raleway;
+            transition: .5s;
+
+            span {
+                font: 300 45px/.8 $Roboto;
+            }
+
+        }
+    }
+
+    .item_1 {
+        color: $orange;
+
+        &:hover {
+            .price_wrapper {
+                background: currentColor;
+
+                p,
+                span {
+                    color: #fff;
+                }
+            }
+
+            border: 4px solid currentColor;
+
+            a {
+                color: #fff;
+                background: $orange;
+            }
+        }
+
+    }
+
+    .item_2 {
+        color: $Neon_Carrot;
+
+        &:hover {
+            .price_wrapper {
+                background: currentColor;
+
+                p,
+                span {
+                    color: #fff;
+                }
+            }
+
+            border: 4px solid currentColor;
+
+            a {
+                color: #fff;
+                background: $Neon_Carrot;
+            }
+        }
+    }
+
+    .item_3 {
+        color: $l_green;
+
+        &:hover {
+            .price_wrapper {
+                background: currentColor;
+
+                p,
+                span {
+                    color: #fff;
+                }
+            }
+
+            border: 4px solid currentColor;
+
+            a {
+                color: #fff;
+                background: $l_green;
+            }
+        }
+    }
+
+    .item_4 {
+        color: $green;
+
+        &:hover {
+            .price_wrapper {
+                background: currentColor;
+
+                p,
+                span {
+                    color: #fff;
+                }
+            }
+
+            border: 4px solid currentColor;
+
+            a {
+                color: #fff;
+                background: $green;
+            }
         }
     }
 }

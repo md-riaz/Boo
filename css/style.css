@@ -16,7 +16,9 @@ h6 {
   font: 400 16px/1.9 "Montserrat", sans-serif; }
 
 p {
-  font: 400 13px/1.85 "Open Sans", sans-serif; }
+  font: 400 13px/1.85 "Open Sans", sans-serif;
+  text-transform: capitalize;
+  color: #999999; }
 
 img {
   max-width: 100%; }
@@ -147,7 +149,7 @@ section {
 .slider_bg {
   background-image: url(../img/BG-WHITE.png);
   background-size: contain;
-  background-position: to;
+  background-position: top;
   background-repeat: no-repeat;
   width: 100%;
   height: 900px;
@@ -299,6 +301,8 @@ section {
   #facts .texts {
     text-transform: uppercase;
     padding: 30px 0; }
+    #facts .texts p {
+      color: #fff; }
     #facts .texts p:nth-child(1) {
       font-family: "Raleway", sans-serif;
       font-size: 48px;
@@ -542,6 +546,7 @@ section {
     #team .team_slider .team_contents .team_details h6 {
       color: #fff; }
     #team .team_slider .team_contents .team_details p {
+      color: #fff;
       font-family: "Montserrat", sans-serif;
       font-size: 14px; }
     #team .team_slider .team_contents .team_details .skills p {
@@ -914,6 +919,8 @@ section {
     width: 52px;
     height: 2px;
     margin: 20px 0; }
+  #services .service_details p {
+    color: #fff; }
   #services .service_img {
     padding: 0 10px 0 40px;
     position: relative; }
@@ -927,6 +934,7 @@ section {
   #services .service_action_btn {
     padding: 50px 0; }
     #services .service_action_btn a {
+      display: inline-block;
       padding: 10px 30px;
       border: 1px solid #fff;
       border-radius: 5px;
@@ -1004,7 +1012,9 @@ section {
   padding: 7px 33px;
   font: 200 16px/2.25 "Raleway", sans-serif;
   color: #ffffff;
-  position: absolute; }
+  position: absolute;
+  -webkit-box-shadow: 2px 5px 8px 5px #0000003b;
+          box-shadow: 2px 5px 8px 5px #0000003b; }
   #How_we_do .step_label_1 span, #How_we_do .step_label_2 span {
     font-weight: 700; }
   #How_we_do .step_label_1:before, #How_we_do .step_label_2:before {
@@ -1013,7 +1023,7 @@ section {
     bottom: 0;
     right: 0;
     border: 10px solid;
-    border-color: #ffffff75 #efefed #f1f1ef #ffffff75; }
+    border-color: #ffffff75 #b4b5b1 #b1b1ad #ffffff75; }
 
 #How_we_do .step_label_1 {
   background: #fc5b4d;
@@ -1083,4 +1093,106 @@ section {
     background: #5cc99f;
     top: 47%;
     left: 13px; }
+
+#pricing {
+  padding: 100px 0;
+  background: #f9f9f9; }
+  #pricing .title_desc span:nth-child(1) {
+    font-weight: 800;
+    color: #5cc99f; }
+  #pricing .title_desc span:nth-child(2) {
+    font-weight: 800;
+    color: #fc5b4d; }
+  #pricing .price_items {
+    border: 1px solid #ececec;
+    -webkit-transition: .5s;
+    transition: .5s;
+    height: 635px; }
+    #pricing .price_items a {
+      color: currentColor;
+      -webkit-transition: inherit;
+      transition: inherit;
+      padding: 10px 15px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translatex(-50%);
+              transform: translatex(-50%);
+      bottom: 25px; }
+  #pricing h6 {
+    font-size: 18px;
+    padding: 15px;
+    margin: 0; }
+  #pricing p {
+    line-height: 2.7;
+    padding: 0 50px; }
+  #pricing .price_wrapper {
+    padding: 20px;
+    height: 165px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    -webkit-clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+            clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+    -webkit-transition: .5s;
+    transition: .5s; }
+    #pricing .price_wrapper p {
+      font-size: 14px;
+      -webkit-transition: .5s;
+      transition: .5s;
+      margin: 0;
+      padding: 0;
+      line-height: 1; }
+    #pricing .price_wrapper span {
+      font: 700 62px/0.8 "Raleway", sans-serif;
+      -webkit-transition: .5s;
+      transition: .5s; }
+      #pricing .price_wrapper span span {
+        font: 300 45px/0.8 "Roboto", sans-serif; }
+  #pricing .item_1 {
+    color: #fc5b4d; }
+    #pricing .item_1:hover {
+      border: 4px solid currentColor; }
+      #pricing .item_1:hover .price_wrapper {
+        background: currentColor; }
+        #pricing .item_1:hover .price_wrapper p,
+        #pricing .item_1:hover .price_wrapper span {
+          color: #fff; }
+      #pricing .item_1:hover a {
+        color: #fff;
+        background: #fc5b4d; }
+  #pricing .item_2 {
+    color: #fea63e; }
+    #pricing .item_2:hover {
+      border: 4px solid currentColor; }
+      #pricing .item_2:hover .price_wrapper {
+        background: currentColor; }
+        #pricing .item_2:hover .price_wrapper p,
+        #pricing .item_2:hover .price_wrapper span {
+          color: #fff; }
+      #pricing .item_2:hover a {
+        color: #fff;
+        background: #fea63e; }
+  #pricing .item_3 {
+    color: #aecb6a; }
+    #pricing .item_3:hover {
+      border: 4px solid currentColor; }
+      #pricing .item_3:hover .price_wrapper {
+        background: currentColor; }
+        #pricing .item_3:hover .price_wrapper p,
+        #pricing .item_3:hover .price_wrapper span {
+          color: #fff; }
+      #pricing .item_3:hover a {
+        color: #fff;
+        background: #aecb6a; }
+  #pricing .item_4 {
+    color: #5cc99f; }
+    #pricing .item_4:hover {
+      border: 4px solid currentColor; }
+      #pricing .item_4:hover .price_wrapper {
+        background: currentColor; }
+        #pricing .item_4:hover .price_wrapper p,
+        #pricing .item_4:hover .price_wrapper span {
+          color: #fff; }
+      #pricing .item_4:hover a {
+        color: #fff;
+        background: #5cc99f; }
 /*# sourceMappingURL=style.css.map */
