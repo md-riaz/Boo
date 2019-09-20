@@ -562,7 +562,7 @@ section {
     }
 
     .portfolio_images {
-        margin: 50px 0;
+        margin: 50px -15px 0 -15px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -570,11 +570,9 @@ section {
     .portfolio_image {
         position: relative;
         overflow: hidden;
-        margin: 5px;
+        margin: 15px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+
 
         &:hover {
             .details {
@@ -613,11 +611,13 @@ section {
                     size: 15px;
                 }
 
+                color: #ffffff;
                 text-transform: uppercase;
             }
 
             p {
                 line-height: 1.7;
+                color: #ffffff;
             }
 
             a {
@@ -629,32 +629,17 @@ section {
         }
     }
 
-    .item_1 {
-        width: 25%;
-    }
-
-    .item_2 {
-        width: 25%;
-    }
-
-    .item_3 {
-        width: 25%;
-    }
-
-    .item_4 {
-        width: 25%;
-    }
-
-    .item_5 {
-        width: 25%;
-    }
-
+    .item_1,
+    .item_2,
+    .item_4,
+    .item_5,
     .item_6 {
-        width: 50%;
+        width: calc(25% - 30px);
     }
 
+    .item_3,
     .item_7 {
-        width: 50%;
+        width: calc(50% - 30px);
     }
 }
 
@@ -1341,6 +1326,10 @@ section {
             padding: 0 10px 0 40px;
             position: relative;
 
+            img {
+                width: 418px;
+            }
+
             &_inner {
                 position: absolute;
                 width: 385px;
@@ -1586,16 +1575,24 @@ section {
         &_items {
             border: 1px solid #ececec;
             transition: .5s;
-            height: 635px;
+            height: 700px;
+            width: 270px;
+            margin: 20px auto;
+            position: relative;
 
             a {
                 color: currentColor;
                 transition: inherit;
-                padding: 10px 15px;
+                display: block;
+                width: 160px;
+                height: 45px;
+                line-height: 45px;
+                border-radius: 3px;
                 position: absolute;
                 left: 50%;
+                text-transform: uppercase;
                 transform: translatex(-50%);
-                bottom: 25px;
+                bottom: 40px;
             }
         }
     }
@@ -1608,7 +1605,7 @@ section {
 
     p {
         line-height: 2.7;
-        padding: 0 50px;
+        padding: 0 55px;
     }
 
     .price_wrapper {
@@ -1724,6 +1721,77 @@ section {
                 color: #fff;
                 background: $green;
             }
+        }
+    }
+}
+
+
+
+
+
+/*
+* Responsive media query
+*/
+
+@media (max-width: 1199px) {
+    .title_desc {
+        font-size: 40px;
+    }
+
+    #testimonials {
+        .testimonial_container .testimonials_contents {
+            display: block;
+
+            img {
+                width: 80px;
+                margin: auto;
+            }
+        }
+
+        .text {
+            margin: 10px auto;
+        }
+    }
+
+    #services {
+        .service_img_inner {
+            left: 75px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #about .about_photos span:nth-child(1) {
+        left: 0;
+    }
+
+    #about .about_photos span:nth-child(2) {
+        top: 40%;
+        left: 6%;
+    }
+
+    #about .about_photos span:nth-child(3) {
+        top: 20%;
+        right: -8%;
+    }
+
+    #facts .texts p:nth-child(1) {
+        font-size: 40px;
+    }
+
+    #testimonials .clients_brands img {
+        margin: 10px;
+    }
+
+    #services .service_img_inner {
+        left: 155px;
+    }
+
+    #How_we_do {
+
+        .steps span,
+        .step_img {
+            display: none;
         }
     }
 }

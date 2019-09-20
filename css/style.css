@@ -360,7 +360,7 @@ section {
     color: #ffffff; }
 
 #portfolio .portfolio_images {
-  margin: 50px 0;
+  margin: 50px -15px 0 -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,9 +370,7 @@ section {
 #portfolio .portfolio_image {
   position: relative;
   overflow: hidden;
-  margin: 5px; }
-  #portfolio .portfolio_image:last-child {
-    margin-bottom: 0; }
+  margin: 15px; }
   #portfolio .portfolio_image:hover .details {
     opacity: 1;
     visibility: visible;
@@ -411,35 +409,27 @@ section {
       border-color: #fff #fff #e2a1c5 #e2a1c5; }
     #portfolio .portfolio_image .details h6 {
       font-size: 15px;
+      color: #ffffff;
       text-transform: uppercase; }
     #portfolio .portfolio_image .details p {
-      line-height: 1.7; }
+      line-height: 1.7;
+      color: #ffffff; }
     #portfolio .portfolio_image .details a {
       text-transform: capitalize;
       color: #ffffff;
       border: 1px solid #fff;
       margin-top: 20px; }
 
-#portfolio .item_1 {
-  width: 25%; }
-
-#portfolio .item_2 {
-  width: 25%; }
-
-#portfolio .item_3 {
-  width: 25%; }
-
-#portfolio .item_4 {
-  width: 25%; }
-
-#portfolio .item_5 {
-  width: 25%; }
-
+#portfolio .item_1,
+#portfolio .item_2,
+#portfolio .item_4,
+#portfolio .item_5,
 #portfolio .item_6 {
-  width: 50%; }
+  width: calc(25% - 30px); }
 
+#portfolio .item_3,
 #portfolio .item_7 {
-  width: 50%; }
+  width: calc(50% - 30px); }
 
 #testimonials .clients_brands {
   margin: 90px 0; }
@@ -924,6 +914,8 @@ section {
   #services .service_img {
     padding: 0 10px 0 40px;
     position: relative; }
+    #services .service_img img {
+      width: 418px; }
     #services .service_img_inner {
       position: absolute;
       width: 385px;
@@ -1107,24 +1099,32 @@ section {
     border: 1px solid #ececec;
     -webkit-transition: .5s;
     transition: .5s;
-    height: 635px; }
+    height: 700px;
+    width: 270px;
+    margin: 20px auto;
+    position: relative; }
     #pricing .price_items a {
       color: currentColor;
       -webkit-transition: inherit;
       transition: inherit;
-      padding: 10px 15px;
+      display: block;
+      width: 160px;
+      height: 45px;
+      line-height: 45px;
+      border-radius: 3px;
       position: absolute;
       left: 50%;
+      text-transform: uppercase;
       -webkit-transform: translatex(-50%);
               transform: translatex(-50%);
-      bottom: 25px; }
+      bottom: 40px; }
   #pricing h6 {
     font-size: 18px;
     padding: 15px;
     margin: 0; }
   #pricing p {
     line-height: 2.7;
-    padding: 0 50px; }
+    padding: 0 55px; }
   #pricing .price_wrapper {
     padding: 20px;
     height: 165px;
@@ -1195,4 +1195,39 @@ section {
       #pricing .item_4:hover a {
         color: #fff;
         background: #5cc99f; }
+
+/*
+* Responsive media query
+*/
+@media (max-width: 1199px) {
+  .title_desc {
+    font-size: 40px; }
+  #testimonials .testimonial_container .testimonials_contents {
+    display: block; }
+    #testimonials .testimonial_container .testimonials_contents img {
+      width: 80px;
+      margin: auto; }
+  #testimonials .text {
+    margin: 10px auto; }
+  #services .service_img_inner {
+    left: 75px; } }
+
+@media (max-width: 991px) {
+  #about .about_photos span:nth-child(1) {
+    left: 0; }
+  #about .about_photos span:nth-child(2) {
+    top: 40%;
+    left: 6%; }
+  #about .about_photos span:nth-child(3) {
+    top: 20%;
+    right: -8%; }
+  #facts .texts p:nth-child(1) {
+    font-size: 40px; }
+  #testimonials .clients_brands img {
+    margin: 10px; }
+  #services .service_img_inner {
+    left: 155px; }
+  #How_we_do .steps span,
+  #How_we_do .step_img {
+    display: none; } }
 /*# sourceMappingURL=style.css.map */
