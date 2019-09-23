@@ -188,8 +188,11 @@ section {
     .title .divider::after {
       background: #74b8ce;
       top: 5px; }
+  .title > p {
+    padding: 0 150px; }
   .title_desc {
-    margin: 50px 0;
+    margin: 50px 0 20px 0;
+    text-transform: initial;
     font-family: "Raleway", sans-serif;
     font-size: 48px;
     font-weight: 200; }
@@ -659,6 +662,8 @@ section {
     color: #fea63e; }
   #theme_feature .title_desc span:nth-child(2) {
     color: #fc5b4d; }
+  #theme_feature .title_desc span:nth-child(3) {
+    font-weight: 800; }
   #theme_feature .title p {
     font-family: "Montserrat", sans-serif;
     font-size: 14px; }
@@ -940,11 +945,9 @@ section {
       text-transform: uppercase; }
 
 #How_we_do .title_desc span:nth-child(1) {
-  font-weight: 800;
   color: #5cc99f; }
 
 #How_we_do .title_desc span:nth-child(2) {
-  font-weight: 800;
   color: #fc5b4d; }
 
 #How_we_do .step .icon {
@@ -1090,10 +1093,8 @@ section {
   padding: 100px 0;
   background: #f9f9f9; }
   #pricing .title_desc span:nth-child(1) {
-    font-weight: 800;
     color: #5cc99f; }
   #pricing .title_desc span:nth-child(2) {
-    font-weight: 800;
     color: #fc5b4d; }
   #pricing .price_items {
     border: 1px solid #ececec;
@@ -1118,13 +1119,13 @@ section {
       -webkit-transform: translatex(-50%);
               transform: translatex(-50%);
       bottom: 40px; }
+    #pricing .price_items > p {
+      line-height: 2.7;
+      padding: 0 55px; }
   #pricing h6 {
     font-size: 18px;
     padding: 15px;
     margin: 0; }
-  #pricing p {
-    line-height: 2.7;
-    padding: 0 55px; }
   #pricing .price_wrapper {
     padding: 20px;
     height: 165px;
@@ -1138,7 +1139,7 @@ section {
       font-size: 14px;
       -webkit-transition: .5s;
       transition: .5s;
-      margin: 0;
+      margin: 15px 0;
       padding: 0;
       line-height: 1; }
     #pricing .price_wrapper span {
@@ -1195,6 +1196,157 @@ section {
       #pricing .item_4:hover a {
         color: #fff;
         background: #5cc99f; }
+
+#blogs .title_desc span:nth-child(1) {
+  color: #fc5b4d; }
+
+#blogs .title_desc span:nth-child(2) {
+  color: #fcc94a; }
+
+#blogs .title_desc span:nth-child(3) {
+  font-weight: 800;
+  color: #aecb6a; }
+
+#blogs .blog__post {
+  width: 320px;
+  height: 550px;
+  position: relative; }
+  #blogs .blog__post_upper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #ffffff;
+    position: relative;
+    padding-top: 30px; }
+  #blogs .blog__post_cmmt, #blogs .blog__post_likes {
+    margin-left: 20px; }
+    #blogs .blog__post_cmmt .icon, #blogs .blog__post_likes .icon {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    #blogs .blog__post_cmmt .count, #blogs .blog__post_likes .count {
+      margin-left: 5px; }
+  #blogs .blog__post_category {
+    position: absolute;
+    right: 0; }
+    #blogs .blog__post_category span {
+      text-transform: uppercase;
+      background-color: #fc5b4d;
+      padding: 10px 20px;
+      font: 400 12px/1 "Montserrat", sans-serif; }
+  #blogs .blog__post_title {
+    margin-bottom: 25px;
+    position: absolute;
+    bottom: 0; }
+    #blogs .blog__post_title p {
+      display: block;
+      color: #0d0d0d;
+      background-color: #fff;
+      font: 400 18px/35px "Montserrat", sans-serif;
+      padding-left: 15px; }
+    #blogs .blog__post_title p:first-child {
+      width: 239px;
+      height: 35px; }
+    #blogs .blog__post_title p:last-child {
+      width: 190px;
+      height: 35px; }
+
+#blogs .blog__post:nth-child(1) .blog__post_category span {
+  background-color: #fc5b4d; }
+
+#blogs .blog__post:nth-child(2) .blog__post_category span {
+  background-color: #fcc94a; }
+
+#blogs .blog__post:nth-child(3) .blog__post_category span {
+  background-color: #aecb6a; }
+
+#blogs .blog__post:nth-child(4) .blog__post_category span {
+  background-color: #5cc99f; }
+
+#blogs .blog__post:nth-child(5) .blog__post_category span {
+  background-color: #fcc94a; }
+
+#blogs .blog__post:nth-child(6) .blog__post_category span {
+  background-color: #fc5b4d; }
+
+#blogs .blog__post:nth-child(odd) {
+  background-color: #7e7e7e; }
+
+#blogs .blog__post:nth-child(even) {
+  background-color: #b6b6b6; }
+
+#blogs .blog__form {
+  margin: 50px auto; }
+  #blogs .blog__form input[type="email"] {
+    border: 1px solid #5cc99f;
+    width: 60%;
+    display: block;
+    padding: 22px 35px;
+    font: 400 14px/1 "Montserrat", sans-serif;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  #blogs .blog__form .icon {
+    font-size: 1.5em;
+    background-color: #5cc99f;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+    #blogs .blog__form .icon:hover {
+      background-color: #308f6b; }
+
+#contact_us .title_desc span:nth-child(1) {
+  color: #5cc99f; }
+
+#contact_us .title_desc span:nth-child(2) {
+  color: #fc5b4d; }
+
+#contact_us .form-group input {
+  border-radius: 2px;
+  border: none;
+  background-color: #ededed;
+  color: #767373;
+  padding: 18px 79px 18px 19px;
+  font: 400 13/1 "Open Sans", sans-serif; }
+
+#contact_us .form-group textarea {
+  border-radius: 2px;
+  border: none;
+  background-color: #ededed;
+  color: #767373;
+  font: 400 13px/1 "Open Sans", sans-serif;
+  resize: both;
+  padding: 20px;
+  line-height: 1.2;
+  width: 100%;
+  max-width: 100%; }
+
+#contact_us .form-group .submit_btn {
+  border: none;
+  background-color: #fc5b4d;
+  font: 700 13px/1 "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 270px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  #contact_us .form-group .submit_btn:hover {
+    background-color: #df1504; }
 
 /*
 * Responsive media query
