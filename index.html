@@ -1278,7 +1278,8 @@
                                 Standart <span>Price</span> For <span>Premium</span> Services
                             </div>
                             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                nulla pariatur excepteur sint occaecat<br>
+                                cupidatat non proident, sunt in culpa qui officia
                                 deserunt mollit anim id est laborum</p>
                         </div>
                         <div class="price_container">
@@ -1371,7 +1372,8 @@
                             We Have <span>Tutorial</span>, <span>News</span>, <span>Freebies</span>, etc.
                         </div>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            nulla pariatur excepteur sint occaecat <br>
+                            cupidatat non proident, sunt in culpa qui officia
                             deserunt mollit anim id est laborum</p>
                     </div>
                 </div>
@@ -1604,7 +1606,7 @@
                     </div>
                     <div class="form-group">
                         <form method="post" action="" enctype="multipart/form-data">
-                            <div class="form_inputs d-flex justify-content-between mb-3">
+                            <div class="form_inputs d-flex justify-content-md-between justify-content-sm-center flex-wrap mb-3">
 
                                 <input type="text" name="name" placeholder="Name">
                                 <input type="email" name="email" placeholder="Email">
@@ -1615,6 +1617,29 @@
                         </form>
 
                     </div>
+                </div>
+            </section>
+            <section id="banner">
+                <div class="container">
+                    
+                    <div class="banner_container d-flex justify-content-between align-items-center">
+                        <div class="banner_img">
+                            <img src="img/pc.png" alt="">
+                        </div>
+                        <p>BOO is awesome PSD template and web builder kit. <br> It’s only beg</p>
+                        <a href="#" class="banner_btn">Purchase Now</a>
+                    </div>
+                </div>
+            </section>
+            <section id="get_in_touch">
+                <div class="container">
+                    <div class="title">
+
+                    </div>
+                    <div class="address">
+
+                    </div>
+                    <div class="social"></div>
                 </div>
             </section>
             <footer id="main-footer"></footer>
@@ -1632,14 +1657,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
     <script>
-        // $('.portfolio_images').isotope({
-        //     itemSelector: '.portfolio_image',
-        //     percentPosition: true,
-        //     masonry: {
-        //         columnWidth: 50,
-        //         horizontalOrder: true
-        //     }
-        // });
+        // init Isotope
+        var $grid = $('.portfolio_images').isotope({
+            // options
+            itemSelector: '.portfolio_image',
+            percentPosition: true,
+            masonry: {
+                columnWidth: 50,
+                horizontalOrder: true
+            }
+        });
+        // filter items on button click
+        $('.filter_grp').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({
+                filter: filterValue
+            });
+        });
+
+
     </script>
 </body>
 

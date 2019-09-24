@@ -188,8 +188,6 @@ section {
     .title .divider::after {
       background: #74b8ce;
       top: 5px; }
-  .title > p {
-    padding: 0 150px; }
   .title_desc {
     margin: 50px 0 20px 0;
     text-transform: initial;
@@ -935,6 +933,7 @@ section {
       padding: 10px 30px;
       border: 1px solid #fff;
       border-radius: 5px;
+      margin-bottom: 10px;
       font: 700 13px "Montserrat", sans-serif;
       -webkit-transition: .5s;
       transition: .5s; }
@@ -1315,8 +1314,9 @@ section {
   border: none;
   background-color: #ededed;
   color: #767373;
-  padding: 18px 79px 18px 19px;
-  font: 400 13/1 "Open Sans", sans-serif; }
+  padding: 21px 95px 21px 19px;
+  margin-bottom: 10px;
+  font: 400 13px/1 "Open Sans", sans-serif; }
 
 #contact_us .form-group textarea {
   border-radius: 2px;
@@ -1347,6 +1347,41 @@ section {
   transition: .5s; }
   #contact_us .form-group .submit_btn:hover {
     background-color: #df1504; }
+
+#banner {
+  height: 308px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/Banner.jpg);
+  background-size: cover;
+  background-position: center; }
+  #banner p {
+    color: #ffffff;
+    font: 400 16px/1 "Montserrat", sans-serif; }
+  #banner a {
+    display: block;
+    width: 194px;
+    height: 49px;
+    color: #f2b623;
+    background-color: #fff;
+    font: 700 13px/49px "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -webkit-transition: .5s;
+    transition: .5s; }
+    #banner a:hover {
+      background-color: #e6e6e6; }
+
+#get_in_touch {
+  height: 415px;
+  background-image: url(../img/Get_In_touch_BG.jpg);
+  background-size: cover;
+  background-position: center; }
 
 /*
 * Responsive media query
