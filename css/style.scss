@@ -563,16 +563,15 @@ section {
         }
     }
 
-    .portfolio_images {
+    .grid {
         margin: 50px -15px 0 -15px;
-        display: flex;
         flex-wrap: wrap;
     }
 
-    .portfolio_image {
+    .portfolio_img {
         position: relative;
-        overflow: hidden;
-        margin: 15px;
+        // overflow: hidden;
+        margin-bottom: 15px;
 
 
 
@@ -631,18 +630,19 @@ section {
         }
     }
 
-    .item_1,
-    .item_2,
-    .item_4,
-    .item_5,
-    .item_6 {
-        width: calc(25% - 30px);
+    img {
+        max-width: none;
     }
 
+    .item_1,
+    .item_2,
     .item_3,
-    .item_7 {
-        width: calc(50% - 30px);
-    }
+    .item_4,
+    .item_5,
+    .item_6 {}
+
+
+    .item_7 {}
 }
 
 #testimonials {
@@ -762,7 +762,8 @@ section {
 
         .team_contents {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
             margin: 100px 0;
             padding: 50px 0;
@@ -770,8 +771,8 @@ section {
 
             .team_img {
                 width: 240px;
-                height: 290px;
-                margin: 10px;
+                height: 300px;
+                margin: 15px;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
@@ -783,19 +784,20 @@ section {
             }
 
             .team_details {
-                width: calc(100% - 300px);
+                max-width: 370px;
+                padding-right: 20px;
 
-                .name {
-                    margin: 15px 0px;
+                @media (max-width:1754px) {
+                    text-align: center;
                 }
 
                 h6 {
-
+                    margin: 0;
                     color: #fff;
                 }
 
                 p {
-                    color: #fff;
+                    color: #000;
 
                     font: {
                         family: $Montserrat;
@@ -817,7 +819,8 @@ section {
                     flex-wrap: wrap;
 
                     .label {
-                        width: 100px;
+                        width: 95px;
+                        padding-left: 5px;
                     }
 
                     .progress {
@@ -833,17 +836,13 @@ section {
                 }
 
                 .social {
-                    margin: 40px 0;
+                    margin-top: 35px;
+                    font-size: 1.2em;
 
                     a {
                         margin-right: 10px;
                         color: #ffffff;
 
-                        i {
-                            @media screen and (max-width:1730px) {
-                                font-size: 1.5em;
-                            }
-                        }
                     }
                 }
             }
@@ -862,15 +861,15 @@ section {
         }
     }
 
-    .owl-nav {
-        font-size: 7em;
-        position: relative;
-        top: -935px;
-        left: 36%;
-        display: flex;
-        justify-content: space-between;
-        width: 350px;
-    }
+    // .owl-nav {
+    //     font-size: 7em;
+    //     position: relative;
+    //     top: -935px;
+    //     left: 36%;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     width: 350px;
+    // }
 }
 
 #features {
@@ -1960,7 +1959,15 @@ section {
             &:hover {
                 background-color: darken($orange, 20%);
             }
+
         }
+    }
+
+    .input_1,
+    .input_2 {
+        width: calc(50% - 5px);
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -1994,13 +2001,15 @@ section {
         transition: .5s;
 
         &:hover {
-            background-color: darken( #fff,10%);
+            background-color: darken(#fff, 10%);
         }
     }
 
 }
+
 #get_in_touch {
     height: 415px;
+
     background: {
         image: url(../img/Get_In_touch_BG.jpg);
         size: cover;
@@ -2037,6 +2046,16 @@ section {
     #services {
         .service_img_inner {
             left: 75px;
+        }
+    }
+
+    #contact_us {
+
+        .input_1,
+        .input_2 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
@@ -2076,3 +2095,5 @@ section {
         }
     }
 }
+
+@media (max-width: 767px) {}

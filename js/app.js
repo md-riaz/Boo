@@ -31,14 +31,35 @@ $(document).ready(function () {
         items: 2,
         loop: true,
         dots: false,
-        autoplay: true
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            767: {
+                items: 2
+            }
+        }
     });
 
     $(".team_slide").owlCarousel({
         items: 3,
         loop: true,
         dots: false,
-        nav: true,
-        autoplay: true
+        nav: false,
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            650: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            }
+        }
     });
 });
