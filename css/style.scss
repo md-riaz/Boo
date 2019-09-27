@@ -88,29 +88,96 @@ body {
         }
     }
 
+    .nav_icon,
+    .close {
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .nav_icon {
+        margin-right: 20px;
+
+        background: {
+            image: url(../img/burger.svg);
+        }
+    }
+
+    .close {
+        background: {
+            image: url(../img/cancel.svg);
+        }
+    }
+
     .navigation-container {
         display: flex;
         justify-content: flex-end;
+    }
+
+    .main-nav {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                a {
+                    display: block;
+                    padding: 20px;
+                    font: 700 13px $Montserrat;
+                    color: $l_gray;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $orange;
+        width: 75px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .navigation-container.nav_active {
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: $orange;
+        width: 50%;
+        height: 100vh;
+        z-index: 2;
+
+        .nav_icon {
+            display: none;
+        }
 
         .main-nav {
             ul {
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-                display: flex;
-                justify-content: flex-end;
+                display: block;
+                width: 100%;
+                text-align: center;
 
                 li {
                     a {
-                        display: block;
-                        padding: 20px;
-                        font: 700 13px $Montserrat;
-                        color: $l_gray;
-                        text-transform: uppercase;
-                        text-decoration: none;
+                        color: #ffffff;
+                    }
 
-                        &:hover {
+                    &:hover {
+                        a {
                             color: $orange;
+                            background-color: #fff;
                         }
                     }
                 }
@@ -118,13 +185,9 @@ body {
         }
 
         .search-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $orange;
-            width: 75px;
-            color: #ffffff;
-            font-size: 20px;
+            display: block;
+            text-align: center;
+            width: 100%;
         }
     }
 }
@@ -188,9 +251,17 @@ section {
 
             color: #000000;
             background: #ffffff;
-            width: 480px;
             margin-bottom: 3px;
         }
+
+        p:nth-child(2) {
+            width: 480px;
+        }
+
+        p:nth-child(3) {
+            width: 400px;
+        }
+
 
         h3,
         p {
@@ -2112,6 +2183,27 @@ footer#main-footer {
             width: 100%;
             display: flex;
             justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 1090px) {
+    #main-header {
+        .nav_icon {
+            display: block;
+        }
+
+        .navigation-container {
+
+            .main-nav {
+                ul {
+                    display: none;
+                }
+            }
+
+            .search-container {
+                display: none;
+            }
         }
     }
 }

@@ -48,6 +48,17 @@ body {
         top: -2px;
         left: -3px;
         border-radius: 3px; }
+  #main-header .nav_icon,
+  #main-header .close {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: none; }
+  #main-header .nav_icon {
+    margin-right: 20px;
+    background-image: url(../img/burger.svg); }
+  #main-header .close {
+    background-image: url(../img/cancel.svg); }
   #main-header .navigation-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -55,39 +66,62 @@ body {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-    #main-header .navigation-container .main-nav ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
-      #main-header .navigation-container .main-nav ul li a {
-        display: block;
-        padding: 20px;
-        font: 700 13px "Montserrat", sans-serif;
-        color: #777777;
-        text-transform: uppercase;
-        text-decoration: none; }
-        #main-header .navigation-container .main-nav ul li a:hover {
-          color: #fc5b4d; }
-    #main-header .navigation-container .search-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      background-color: #fc5b4d;
-      width: 75px;
-      color: #ffffff;
-      font-size: 20px; }
+  #main-header .main-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    #main-header .main-nav ul li a {
+      display: block;
+      padding: 20px;
+      font: 700 13px "Montserrat", sans-serif;
+      color: #777777;
+      text-transform: uppercase;
+      text-decoration: none; }
+      #main-header .main-nav ul li a:hover {
+        color: #fc5b4d; }
+  #main-header .search-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #fc5b4d;
+    width: 75px;
+    color: #ffffff;
+    font-size: 20px; }
+  #main-header .navigation-container.nav_active {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: #fc5b4d;
+    width: 50%;
+    height: 100vh;
+    z-index: 2; }
+    #main-header .navigation-container.nav_active .nav_icon {
+      display: none; }
+    #main-header .navigation-container.nav_active .main-nav ul {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      #main-header .navigation-container.nav_active .main-nav ul li a {
+        color: #ffffff; }
+      #main-header .navigation-container.nav_active .main-nav ul li:hover a {
+        color: #fc5b4d;
+        background-color: #fff; }
+    #main-header .navigation-container.nav_active .search-container {
+      display: block;
+      text-align: center;
+      width: 100%; }
 
 section {
   padding: 50px 0; }
@@ -127,8 +161,11 @@ section {
     font-size: 20px;
     color: #000000;
     background: #ffffff;
-    width: 480px;
     margin-bottom: 3px; }
+  #slider .slide_content p:nth-child(2) {
+    width: 480px; }
+  #slider .slide_content p:nth-child(3) {
+    width: 400px; }
   #slider .slide_content h3,
   #slider .slide_content p {
     padding-left: 10px; }
@@ -1453,6 +1490,14 @@ footer#main-footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; } }
+
+@media (max-width: 1090px) {
+  #main-header .nav_icon {
+    display: block; }
+  #main-header .navigation-container .main-nav ul {
+    display: none; }
+  #main-header .navigation-container .search-container {
+    display: none; } }
 
 @media (max-width: 991px) {
   #about .about_photos span:nth-child(1) {

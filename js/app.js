@@ -5,6 +5,9 @@ var queryAll = document.querySelectorAll.bind(document);
  * Variables
  */
 let btn_tabs = queryAll(".btn__tab");
+let nav = query(".navigation-container");
+
+
 /* 
  * Events
  */
@@ -14,7 +17,8 @@ btn_tabs.forEach(el => {
         el.classList.add("active");
     });
 });
-
+//nav icon
+nav.addEventListener("click", () => nav.classList.add("nav_active"));
 /* 
  * Owl Carosel
  */
