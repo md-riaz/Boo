@@ -2038,7 +2038,8 @@ section {
 
     p {
         color: #ffffff;
-        font: 400 16px/1 $Montserrat;
+        font: 400 16px/1.6 $Montserrat;
+        text-transform: initial;
     }
 
     a {
@@ -2123,6 +2124,7 @@ footer#main-footer {
         list-style-type: none;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         li {
             a {
@@ -2182,7 +2184,13 @@ footer#main-footer {
         .input_2 {
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+        }
+
+        .input_1>*,
+        .input_2>* {
+            width: calc(50% - 5px) !important;
         }
     }
 }
@@ -2272,6 +2280,10 @@ footer#main-footer {
         left: 50px;
     }
 
+    #contact_us .input_1>*,
+    #contact_us .input_2>* {
+        width: 100% !important;
+    }
 
 }
 

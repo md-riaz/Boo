@@ -1388,7 +1388,8 @@ section {
   background-position: center; }
   #banner p {
     color: #ffffff;
-    font: 400 16px/1 "Montserrat", sans-serif; }
+    font: 400 16px/1.6 "Montserrat", sans-serif;
+    text-transform: initial; }
   #banner a {
     display: block;
     width: 194px;
@@ -1452,7 +1453,9 @@ footer#main-footer {
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     footer#main-footer ul li a {
       display: block;
       padding: 20px;
@@ -1487,9 +1490,14 @@ footer#main-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; } }
+            justify-content: space-between; }
+  #contact_us .input_1 > *,
+  #contact_us .input_2 > * {
+    width: calc(50% - 5px) !important; } }
 
 @media (max-width: 1090px) {
   #main-header .nav_icon {
@@ -1533,7 +1541,10 @@ footer#main-footer {
     height: 172px;
     width: 172px; }
   #services .service_img_inner {
-    left: 50px; } }
+    left: 50px; }
+  #contact_us .input_1 > *,
+  #contact_us .input_2 > * {
+    width: 100% !important; } }
 
 @media (max-width: 575px) {
   #features .feature_item {
