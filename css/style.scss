@@ -104,9 +104,8 @@ body {
                     a {
                         display: block;
                         padding: 20px;
-                        font-size: 13px;
-                        font-weight: bold;
-                        color: #000000;
+                        font: 700 13px $Montserrat;
+                        color: $l_gray;
                         text-transform: uppercase;
                         text-decoration: none;
 
@@ -374,13 +373,11 @@ section {
         p:nth-child(1) {
             margin: 25px 0;
             color: $d_gray;
+            font: 700 16px/30px $Montserrat;
         }
 
         p:nth-child(2) {
-            font: {
-                size: 14px;
-                weight: 400;
-            }
+            font: 400 14px/25px $Montserrat;
 
             color: $l_gray;
         }
@@ -629,20 +626,6 @@ section {
             }
         }
     }
-
-    img {
-        max-width: none;
-    }
-
-    .item_1,
-    .item_2,
-    .item_3,
-    .item_4,
-    .item_5,
-    .item_6 {}
-
-
-    .item_7 {}
 }
 
 #testimonials {
@@ -835,16 +818,6 @@ section {
                     }
                 }
 
-                .social {
-                    margin-top: 35px;
-                    font-size: 1.2em;
-
-                    a {
-                        margin-right: 10px;
-                        color: #ffffff;
-
-                    }
-                }
             }
         }
 
@@ -861,15 +834,17 @@ section {
         }
     }
 
-    // .owl-nav {
-    //     font-size: 7em;
-    //     position: relative;
-    //     top: -935px;
-    //     left: 36%;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     width: 350px;
-    // }
+}
+
+.social {
+    margin-top: 35px;
+    font-size: 1.5em;
+
+    a {
+        margin-right: 10px;
+        color: #ffffff;
+
+    }
 }
 
 #features {
@@ -888,7 +863,7 @@ section {
         align-items: center;
         display: flex;
         flex-direction: column;
-        padding: 30px;
+        padding: 30px 0;
 
         &:hover {
             .icon {
@@ -1214,59 +1189,67 @@ section {
         }
     }
 
-    ul li {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        position: relative;
-        padding: 10px;
-        transition: .5s;
-        cursor: pointer;
+    ul {
+        padding: 0;
 
-        &::before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 1px;
-            bottom: 0;
-            left: 10px;
-            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
-        }
-
-        &::after {
-            position: absolute;
-            content: '';
-            top: 30%;
-            right: -5px;
-            width: 20px;
-            height: 20px;
-            background: #ffffff;
-            transform: rotate(45deg) scale(0);
+        li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 10px;
             transition: .5s;
-        }
+            cursor: pointer;
 
-        &:hover,
-        &.active {
-            background: #ffffff;
-            color: $orange;
-
-            &::after {
-                transform: rotate(45deg) scale(1);
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 10px;
+                background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
             }
 
-            .i1,
-            .i2,
-            .i3,
-            .i4,
-            .i5,
-            .i6,
-            .i7 {
-                background-position: right;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 30%;
+                right: -5px;
+                width: 20px;
+                height: 20px;
+                background: #ffffff;
+                transform: rotate(45deg) scale(0);
+                transition: .5s;
+            }
+
+            &:hover,
+            &.active {
+                background: #ffffff;
+                color: $orange;
+
+                &::after {
+                    transform: rotate(45deg) scale(1);
+                }
+
+                .i1,
+                .i2,
+                .i3,
+                .i4,
+                .i5,
+                .i6,
+                .i7 {
+                    background-position: right;
+                }
             }
         }
     }
 
     .service {
+        &_list {
+            font: 400 16px $Montserrat;
+        }
+
         &_icon {
             height: 25px;
             width: 30px;
@@ -1328,7 +1311,6 @@ section {
         }
 
         &_img {
-            padding: 0 10px 0 40px;
             position: relative;
 
             img {
@@ -1340,7 +1322,7 @@ section {
                 width: 385px;
                 height: 205px;
                 top: 75px;
-                left: 45px;
+                left: 29px;
                 background: #526b71;
             }
         }
@@ -2008,6 +1990,7 @@ section {
 }
 
 #get_in_touch {
+    padding: 50px 0;
     height: 415px;
 
     background: {
@@ -2017,6 +2000,79 @@ section {
 
     }
 
+    .title {
+        color: #ffffff;
+        margin: 0 0 40px 0;
+
+        h5 {
+            text-transform: uppercase;
+            font: 400 20px/2 $Montserrat;
+        }
+
+        p {
+            font: 400 14px/1.75 $Montserrat;
+            color: inherit;
+        }
+    }
+
+    .address_item {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 1.5em;
+
+        .icon {
+            width: 30px;
+            margin-right: 20px;
+            text-align: center;
+
+        }
+
+        p {
+            margin: 0;
+            color: inherit;
+            font: 700 13px $Montserrat;
+
+            span {
+                color: #ffdd48;
+                text-transform: lowercase;
+            }
+        }
+    }
+
+}
+
+footer#main-footer {
+    background-color: #333333;
+    padding: 50px 0;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+
+        li {
+            a {
+                display: block;
+                padding: 20px;
+                font: 400 13px $Montserrat;
+                color: #ffffff;
+                text-decoration: none;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font: 400 13px $Montserrat;
+        color: $w_gray;
+        text-align: center;
+    }
 }
 
 /*
@@ -2045,7 +2101,7 @@ section {
 
     #services {
         .service_img_inner {
-            left: 75px;
+            left: 60px;
         }
     }
 
@@ -2084,7 +2140,7 @@ section {
     }
 
     #services .service_img_inner {
-        left: 155px;
+        left: 140px;
     }
 
     #How_we_do {
@@ -2096,4 +2152,43 @@ section {
     }
 }
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    #about {
+        .about_info>div {
+            padding: 0 50px;
+        }
+
+        .about_photos span:nth-child(1) {
+            height: 100px;
+            width: 100px;
+        }
+
+        .about_photos span:nth-child(2) {
+            height: 140px;
+            width: 140px;
+            top: 35%;
+            left: 4%;
+        }
+
+        .about_photos span:nth-child(3) {
+            height: 172px;
+            width: 172px;
+        }
+    }
+
+    #services .service_img_inner {
+        left: 50px;
+    }
+
+
+}
+
+@media (max-width: 575px) {
+    #features .feature_item {
+        padding: 15px 30px;
+    }
+
+    #How_we_do .steps_item {
+        padding: 0 50px;
+    }
+}
