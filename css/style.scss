@@ -2253,6 +2253,16 @@ footer#main-footer {
             display: none;
         }
     }
+    #banner {
+        height: 350px;
+            text-align: center;
+        .banner_img {
+            margin-bottom: 15px;
+        }
+        a {
+            margin: auto;
+        }
+    } 
 }
 
 @media (max-width: 767px) {

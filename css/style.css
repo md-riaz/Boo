@@ -2087,6 +2087,16 @@ footer#main-footer .copyright {
   #How_we_do .step_img {
     display: none;
   }
+  #banner {
+    height: 350px;
+    text-align: center;
+  }
+  #banner .banner_img {
+    margin-bottom: 15px;
+  }
+  #banner a {
+    margin: auto;
+  }
 }
 
 @media (max-width: 767px) {
