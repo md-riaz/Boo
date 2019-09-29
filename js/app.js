@@ -6,23 +6,26 @@ var queryAll = document.querySelectorAll.bind(document);
  */
 let btn_tabs = queryAll(".btn__tab");
 let nav = query(".navigation-container");
-
+let close_btn = query('.close');
 
 /* 
  * Events
  */
-btn_tabs.forEach(el => {
-    el.addEventListener("click", () => {
-        btn_tabs.forEach(tab => tab.classList.remove("active"));
-        el.classList.add("active");
-    });
-});
-//nav icon
-nav.addEventListener("click", () => nav.classList.add("nav_active"));
-/* 
- * Owl Carosel
- */
+
 $(document).ready(function () {
+    btn_tabs.forEach(el => {
+        el.addEventListener("click", () => {
+            btn_tabs.forEach(tab => tab.classList.remove("active"));
+            el.classList.add("active");
+        });
+    });
+    //nav icon
+    nav.addEventListener("click", () => nav.classList.add("nav_active"));
+    close_btn.addEventListener("click", () => nav.classList.remove("nav_active"));
+
+    /* 
+     * Owl Carosel
+     */
 
     $(".slide").owlCarousel({
         items: 1,
@@ -65,5 +68,23 @@ $(document).ready(function () {
                 items: 3
             }
         }
+    });
+});
+
+// init Isotope
+var $grid = $('.grid').isotope({
+    // options
+    itemSelector: '.grid_item',
+    percentPosition: true,
+    masonry: {
+        columnWidth: '.grid_item'
+    }
+});
+
+// filter items on button click
+$('.filter_grp').on('click', 'button', function () {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: filterValue
     });
 });

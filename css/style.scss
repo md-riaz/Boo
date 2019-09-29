@@ -88,12 +88,19 @@ body {
         }
     }
 
-    .nav_icon,
-    .close {
+    .nav_icon {
         height: 50px;
         width: 50px;
         cursor: pointer;
         display: none;
+    }
+
+    .close {
+        width: 100%;
+        display: none;
+        cursor: pointer;
+        text-align: center;
+        padding: 15px;
     }
 
     .nav_icon {
@@ -101,12 +108,6 @@ body {
 
         background: {
             image: url(../img/burger.svg);
-        }
-    }
-
-    .close {
-        background: {
-            image: url(../img/cancel.svg);
         }
     }
 
@@ -161,6 +162,10 @@ body {
 
         .nav_icon {
             display: none;
+        }
+
+        .close {
+            display: block;
         }
 
         .main-nav {
@@ -254,11 +259,11 @@ section {
             margin-bottom: 3px;
         }
 
-        p:nth-child(2) {
+        p:nth-of-type(1) {
             width: 480px;
         }
 
-        p:nth-child(3) {
+        p:nth-of-type(2) {
             width: 400px;
         }
 
@@ -1628,7 +1633,8 @@ section {
 
     .price {
         &_items {
-            border: 1px solid #ececec;
+            border: 4px solid transparent;
+            outline: 1px solid #ececec;
             transition: .5s;
             height: 700px;
             width: 270px;
@@ -2063,7 +2069,7 @@ section {
 
 #get_in_touch {
     padding: 50px 0;
-    height: 415px;
+    height: 380px;
 
     background: {
         image: url(../img/Get_In_touch_BG.jpg);
@@ -2172,12 +2178,6 @@ footer#main-footer {
         }
     }
 
-    #services {
-        .service_img_inner {
-            left: 60px;
-        }
-    }
-
     #contact_us {
 
         .input_1,
@@ -2220,6 +2220,7 @@ footer#main-footer {
     #about .about_photos {
         background-size: 550px;
     }
+
     #about .about_photos span:nth-child(1) {
         left: 0;
     }
@@ -2242,9 +2243,7 @@ footer#main-footer {
         margin: 10px;
     }
 
-    #services .service_img_inner {
-        left: 140px;
-    }
+
 
     #How_we_do {
 
@@ -2253,16 +2252,19 @@ footer#main-footer {
             display: none;
         }
     }
+
     #banner {
         height: 350px;
-            text-align: center;
+        text-align: center;
+
         .banner_img {
             margin-bottom: 15px;
         }
+
         a {
             margin: auto;
         }
-    } 
+    }
 }
 
 @media (max-width: 767px) {
@@ -2289,9 +2291,6 @@ footer#main-footer {
         }
     }
 
-    #services .service_img_inner {
-        left: 50px;
-    }
 
     #contact_us .input_1>*,
     #contact_us .input_2>* {
@@ -2301,6 +2300,23 @@ footer#main-footer {
 }
 
 @media (max-width: 575px) {
+    #slider .slide_content {
+
+        p:nth-of-type(1),
+        p:nth-of-type(2) {
+            font-size: 1em;
+            padding: 10px;
+        }
+
+        p:nth-of-type(1) {
+            width: 70vw;
+        }
+
+        p:nth-of-type(2) {
+            width: 60vw;
+        }
+    }
+
     #features .feature_item {
         padding: 15px 30px;
     }
