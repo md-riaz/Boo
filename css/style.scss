@@ -93,6 +93,14 @@ body {
         width: 50px;
         cursor: pointer;
         display: none;
+        position: absolute;
+        right: 0;
+        top: 6px;
+        z-index: 5;
+    }
+
+    .nav_icon.btn-active {
+        display: none
     }
 
     .close {
@@ -158,16 +166,16 @@ body {
         align-items: center;
         position: fixed;
         left: 0;
-        background-color: #fc5b4d;
+        background-color: #918c8c;
         max-width: 100%;
         width: 100%;
         height: 100vh;
         z-index: 2;
         transition: 0.5s;
 
-        .nav_icon {
-            display: none;
-        }
+        // .nav_icon {
+        //     display: none;
+        // }
 
         .close {
             display: block;
@@ -252,7 +260,7 @@ body {
 
     .search-popup-inner {
         max-width: 450px;
-        width: 100%;
+        width: 90%;
 
         input[type="text"] {
             height: 50px;
@@ -386,7 +394,7 @@ section {
     height: 900px;
     z-index: 1;
     position: absolute;
-    top: 550px;
+    top: 84%;
 }
 
 .title {
@@ -720,8 +728,7 @@ section {
 
     .portfolio_img {
         position: relative;
-        // overflow: hidden;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         &:hover {
             .details {
@@ -2287,6 +2294,11 @@ footer#main-footer {
     background-color: $l_gray;
     color: #fff;
     z-index: 5;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $d_gray;
+    }
 }
 
 @media (max-width: 1090px) {
@@ -2296,6 +2308,28 @@ footer#main-footer {
         }
 
         .navigation-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            background-color: #918c8c;
+            max-width: 100%;
+            // width: 100%;
+            height: 100vh;
+            z-index: 2;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+
+            &.nav_active {
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
+            }
+
             .main-nav {
                 ul {
                     display: none;
@@ -2311,7 +2345,7 @@ footer#main-footer {
 
 @media (max-width: 991px) {
     #about .about_photos {
-        background-size: 550px;
+        background-size: 100%;
     }
 
     #about .about_photos span:nth-child(1) {
@@ -2359,6 +2393,14 @@ footer#main-footer {
 }
 
 @media (max-width: 767px) {
+
+    #slider {
+        .slide_items {
+            height: 500px;
+        }
+
+    }
+
     #about {
         .about_info>div {
             padding: 0 50px;
@@ -2389,20 +2431,30 @@ footer#main-footer {
 }
 
 @media (max-width: 575px) {
-    #slider .slide_content {
 
-        p:nth-of-type(1),
-        p:nth-of-type(2) {
-            font-size: 1em;
-            padding: 10px;
+    #slider {
+        .slide_items {
+            height: 400px;
         }
 
-        p:nth-of-type(1) {
-            width: 70vw;
-        }
+        .slide_content {
 
-        p:nth-of-type(2) {
-            width: 60vw;
+            p:nth-of-type(1),
+            p:nth-of-type(2) {
+                font-size: 1em;
+            }
+
+            h3 {
+                width: 80vw;
+            }
+
+            p:nth-of-type(1) {
+                width: 70vw;
+            }
+
+            p:nth-of-type(2) {
+                width: 60vw;
+            }
         }
     }
 
@@ -2412,5 +2464,18 @@ footer#main-footer {
 
     #How_we_do .steps_item {
         padding: 0 50px;
+    }
+
+    #blogs .blog__form {
+
+        .prev,
+        .next {
+            display: none;
+        }
+
+        .blog_email {
+            width: 100%;
+            margin: 0;
+        }
     }
 }

@@ -52,6 +52,12 @@ body {
     height: 50px;
     width: 50px;
     cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    z-index: 5; }
+  #main-header .nav_icon.btn-active {
     display: none; }
   #main-header .close {
     width: 100%;
@@ -118,15 +124,13 @@ body {
             align-items: center;
     position: fixed;
     left: 0;
-    background-color: #fc5b4d;
+    background-color: #918c8c;
     max-width: 100%;
     width: 100%;
     height: 100vh;
     z-index: 2;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
-    #main-header .navigation-container.nav_active .nav_icon {
-      display: none; }
     #main-header .navigation-container.nav_active .close {
       display: block;
       position: absolute;
@@ -192,7 +196,7 @@ body {
   z-index: 999; }
   #search-popup-wrapper .search-popup-inner {
     max-width: 450px;
-    width: 100%; }
+    width: 90%; }
     #search-popup-wrapper .search-popup-inner input[type="text"] {
       height: 50px;
       width: 100%;
@@ -284,7 +288,7 @@ section {
   height: 900px;
   z-index: 1;
   position: absolute;
-  top: 550px; }
+  top: 84%; }
 
 .title {
   color: #555555;
@@ -496,7 +500,7 @@ section {
 
 #portfolio .portfolio_img {
   position: relative;
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
   #portfolio .portfolio_img:hover .details {
     opacity: 1;
     visibility: visible;
@@ -1646,19 +1650,51 @@ footer#main-footer {
   border-radius: 50%;
   background-color: #777777;
   color: #fff;
-  z-index: 5; }
+  z-index: 5;
+  cursor: pointer; }
+  .slideToTop:hover {
+    background-color: #555555; }
 
 @media (max-width: 1090px) {
   #main-header .nav_icon {
     display: block; }
-  #main-header .navigation-container .main-nav ul {
-    display: none; }
-  #main-header .navigation-container .search-container {
-    display: none; } }
+  #main-header .navigation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    left: 0;
+    background-color: #918c8c;
+    max-width: 100%;
+    height: 100vh;
+    z-index: 2;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    width: 0; }
+    #main-header .navigation-container.nav_active {
+      opacity: 1;
+      visibility: visible;
+      width: 100%; }
+    #main-header .navigation-container .main-nav ul {
+      display: none; }
+    #main-header .navigation-container .search-container {
+      display: none; } }
 
 @media (max-width: 991px) {
   #about .about_photos {
-    background-size: 550px; }
+    background-size: 100%; }
   #about .about_photos span:nth-child(1) {
     left: 0; }
   #about .about_photos span:nth-child(2) {
@@ -1683,6 +1719,8 @@ footer#main-footer {
       margin: auto; } }
 
 @media (max-width: 767px) {
+  #slider .slide_items {
+    height: 500px; }
   #about .about_info > div {
     padding: 0 50px; }
   #about .about_photos span:nth-child(1) {
@@ -1701,10 +1739,13 @@ footer#main-footer {
     width: 100% !important; } }
 
 @media (max-width: 575px) {
+  #slider .slide_items {
+    height: 400px; }
   #slider .slide_content p:nth-of-type(1),
   #slider .slide_content p:nth-of-type(2) {
-    font-size: 1em;
-    padding: 10px; }
+    font-size: 1em; }
+  #slider .slide_content h3 {
+    width: 80vw; }
   #slider .slide_content p:nth-of-type(1) {
     width: 70vw; }
   #slider .slide_content p:nth-of-type(2) {
@@ -1712,5 +1753,11 @@ footer#main-footer {
   #features .feature_item {
     padding: 15px 30px; }
   #How_we_do .steps_item {
-    padding: 0 50px; } }
+    padding: 0 50px; }
+  #blogs .blog__form .prev,
+  #blogs .blog__form .next {
+    display: none; }
+  #blogs .blog__form .blog_email {
+    width: 100%;
+    margin: 0; } }
 /*# sourceMappingURL=style.css.map */
