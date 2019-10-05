@@ -157,6 +157,14 @@ $(document).ready(function () {
         }, "slow");
         return false;
     });
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 500) {
+            $('.slideToTop').show();
+        } else {
+            $('.slideToTop').hide();
+        }
+    });
+
 
     //Counter
     var Count = $('.texts p:nth-child(1)');
