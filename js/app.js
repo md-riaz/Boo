@@ -151,12 +151,7 @@ $(document).ready(function () {
     });
 
     // Scroll To Top
-    $('.slideToTop').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, "slow");
-        return false;
-    });
+    $('.slideToTop').hide();
     $(window).scroll(function () {
         if ($(document).scrollTop() > 500) {
             $('.slideToTop').show();
@@ -164,7 +159,12 @@ $(document).ready(function () {
             $('.slideToTop').hide();
         }
     });
-
+    $('.slideToTop').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
+        return false;
+    });
 
     //Counter
     var Count = $('.texts p:nth-child(1)');
@@ -187,7 +187,18 @@ $(document).ready(function () {
         });
     });
 
+    //Services Tabs
+    // Change tab class and display content
+    $('#services .service a').on('click', function (event) {
+        event.preventDefault();
 
+        $('.tab-active').removeClass('tab-active');
+        $(this).parent().addClass('tab-active');
+        $('.service_details > div').hide();
+        $($(this).attr('href')).fadeIn("slow");
+    });
+
+    $('#services .service a:first').trigger('click'); // Default
 
 
 });
